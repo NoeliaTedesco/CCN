@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuitePortalSua]">
+  <parameter name="nombreCarpetaServicio" value="SERVICIOS"/>
+  <parameter name="ambiente" value="testing"/>
+  <parameter name="path_ScreenShotOnFailure" value="C://SCREENSHOTS"/>
+  <parameter name="sSujetoAnular" value="60282144302"/>
+  <parameter name="ipNodo" value="http://192.168.56.1:5551/wd/hub"/>
+  <parameter name="password" value="intranet07"/>
+  <parameter name="appGerencia" value="Portal Corporativo"/>
+  <parameter name="nombreSubCarpetaServicio" value=""/>
+  <parameter name="CodPrestacion" value="255060"/>
+  <parameter name="tramite" value="Comercial"/>
+  <parameter name="browser" value="iexplorer"/>
+  <parameter name="sSocio" value="62470794501"/>
+  <parameter name="usuario" value="SS36739794"/>
+  <parameter name="idServicio" value="2630"/>
+  <parameter name="DesPrestacion" value="CONSULTA EN CONSULTORIO"/>
+  <test name="Buscar prestaciones(failed)">
+    <parameter name="nombreCarpetaServicio" value="SERVICIOS"/>
+    <parameter name="nombreSubCarpetaServicio" value=""/>
+    <parameter name="CodPrestacion" value="255060"/>
+    <parameter name="sSocio" value="62470794501"/>
+    <parameter name="idServicio" value="2630"/>
+    <parameter name="DesPrestacion" value="CONSULTA EN CONSULTORIO"/>
+    <classes>
+      <class name="ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones">
+        <methods>
+          <include name="abrirServicioSocio"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones -->
+    </classes>
+  </test> <!-- Buscar prestaciones(failed) -->
+</suite> <!-- Failed suite [SuitePortalSua] -->

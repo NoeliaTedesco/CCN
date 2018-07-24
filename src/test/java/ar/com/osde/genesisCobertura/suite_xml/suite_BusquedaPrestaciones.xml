@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SuitePortalSua" parallel="false" preserve-order="true">		
+
+	<parameter name="usuario"  					value="SS36739794"/>
+	<parameter name="password"  				value="intranet07"/>
+	<parameter name="ambiente" 					value="testing"/>
+	<parameter name="browser"  					value="iexplorer"/>
+	
+	<!-- CONFIGURACION SELENIUM GRID 
+		Se debe ejecutar el siguiente comando en la pc HUB - donde se encuentra el proyecto selenium (eclipse)
+	 	Es necesario descargarse el archivo "selenium-server-standalone-3.0.1.jar", posicionarse en esa carpeta y ejecutar el comando
+		java -jar selenium-server-standalone-3.0.1.jar -role hub
+		
+		Se debe ejecutar este comando en cada pc nodo - No es necesario descargarse el proyecto en eclipse
+		Es necesario descargarse el archivo "selenium-server-standalone-3.0.1.jar", posicionarse en esa carpeta y ejecutar el comando
+		
+		java -Dwebdriver.chrome.driver=<path donde se encuentra el driver> -Dwebdriver.ie.driver=<path donde se encuentra el driver> -jar selenium-server-standalone-3.0.1.jar -role webdriver -hub http://<direccion ip del hub>:<puerto del hub>/grid/register -port <puerto del nodo>
+	ejemplo:	java -Dwebdriver.chrome.driver="C:\Users\pgomez\Downloads\chromedriver_win32\chromedriver.exe" -Dwebdriver.ie.driver="C:\IEDriverServer_Win32_2.53.1\IEDriverServer.exe" -jar selenium-server-standalone-3.0.1.jar -role webdriver -hub http://10.247.0.20:4444/grid/register -port 5558
+				
+	-->		
+	<parameter name="ipNodo"                   value="http://192.168.56.1:5551/wd/hub"/>
+	<parameter name="path_ScreenShotOnFailure"  value="C://SCREENSHOTS"/>
+	<parameter name="appGerencia"              value="Portal Corporativo"/>
+	
+	
+	<!--	Estos sujetos se buscan en la consola y se eliminan antes de cada test 	-->
+	<parameter name="sSujetoAnular" value="60282144302"></parameter>
+	<parameter name="tramite" 		value="Comercial"></parameter>
+	
+	<test name="Buscar prestaciones" parallel="false" preserve-order="true" >
+			<parameter name="sSocio"     	        	value="62470794501"/>
+			<parameter name="nombreCarpetaServicio" 	value="SERVICIOS"/>
+			<parameter name="nombreSubCarpetaServicio"  value=""/>
+			<parameter name="idServicio"  				value="2630"/>
+			<parameter name="CodPrestacion"       		value="255060"/>
+			<parameter name="DesPrestacion"     		value="CONSULTA EN CONSULTORIO"/>
+			
+		<classes>
+			<class name="ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones">
+				<methods>			
+					<include name=""/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
