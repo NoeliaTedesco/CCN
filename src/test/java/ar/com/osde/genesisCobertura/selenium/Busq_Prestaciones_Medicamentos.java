@@ -2,12 +2,15 @@ package ar.com.osde.genesisCobertura.selenium;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -25,10 +28,10 @@ public class Busq_Prestaciones_Medicamentos {
 	@CacheLookup
 	@FindBy(id = "resultadoPrestacion")
 	private WebElement ResultadoPrestaciones;
-	@FindBy(css = "div.itemView")
-	private WebElement medicamentos;
-	@FindBy(xpath = "//input[contains(@class, 'ui-autocomplete-input']")
-	private WebElement autocompletePrestacion;
+
+	@FindBy(xpath = "//input[contains(@class, 'ui-autocomplete-input')]")
+	private WebElement divInput;
+
 	@FindBy(css = "select.validate.ajaxComboBox")
 	private WebElement comboContexto;
 	@FindBy(xpath = "//img[contains(@src, 'http://concobergent.intranet.osde:9380/ccn-frontend/images/usabilidad/iconos_on/plus.png')]")
@@ -51,10 +54,13 @@ public class Busq_Prestaciones_Medicamentos {
 	private WebElement filtroPrestador;
 	@FindBy(css = "select.filial.ajaxComboBox")
 	private WebElement comboFilialPrestador;
+
 	@FindBy(id = "prestador")
 	private WebElement autocompletePrestador;
+
 	@FindBy(id = "btnBuscar")
 	private WebElement btnBuscar;
+
 	@FindBy(id = "btnLimpiar")
 	private WebElement btnLimpiar;
 
@@ -65,35 +71,39 @@ public class Busq_Prestaciones_Medicamentos {
 		log = Logger.getLogger(getClass().getName());
 	}
 
-	public void cargarPrestacion(String busqueda) throws AWTException {
-		List<WebElement> lstRegistros = autocompletePrestacion.findElements(By.className("elemento input-prestacion validate params"));
-		for (WebElement registros : lstRegistros) {
-			List<WebElement> registro  = registros.findElements(By.className("ui-autocomplete-input"));
-			for(WebElement autocomplete : registro) {
-				autocomplete.click();
-				autocomplete.sendKeys(busqueda);
-				autocomplete.submit();
-				
-	/*			Robot rw = new Robot();
-				rw.keyPress(KeyEvent.VK_DOWN);
-				rw.keyRelease(KeyEvent.VK_DOWN);
-				rw.keyPress(KeyEvent.VK_ENTER);
-				rw.keyRelease(KeyEvent.VK_ENTER);
-*/
+	public void cargarPrestacion(String NombreServicio) {
+
+		List<WebElement> listaServicios = driver.findElements(By.xpath("//*[starts-with(@id, 'suaServicioWidget')]"));
+		if (listaServicios.size() > 0) {
+			ArrayList<String> serviciosAbiertos = new ArrayList<String>();
+
+			for (WebElement servicio : listaServicios) {
+				serviciosAbiertos.add(servicio.getAttribute("widgettitle"));
+				if ((servicio.getAttribute("widgettitle")).equals(NombreServicio)) {
+					List<WebElement> inputs = servicio
+							.findElements(By.xpath("//input[contains(@class, 'ui-autocomplete-input')]"));
+					int i = 0;
+					for (WebElement input : inputs) {
+						JavascriptExecutor js = ((JavascriptExecutor) driver);
+						js.executeScript("document.getElementsByClassName('ui-autocomplete-input')[" + i
+								+ "].setAttribute('value', 'CONSULTA EN CONSULTORIO')");
+						i++;
+					}
+				}
+
 			}
 		}
+		btnBuscar.click();
 
 	}
 
-	public boolean validarValorCampo(String busqueda) throws AWTException {
-
-		String prestacionSeleccionada = autocompletePrestacion.getText().toString();
-
-		if (prestacionSeleccionada == busqueda) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+	/*
+	 * public boolean validarValorCampo(String busqueda) throws AWTException {
+	 * 
+	 * String prestacionSeleccionada = autocompletePrestacion.getText().toString();
+	 * 
+	 * if (prestacionSeleccionada == busqueda) { return true; } else { return false;
+	 * }
+	 */
 
 }

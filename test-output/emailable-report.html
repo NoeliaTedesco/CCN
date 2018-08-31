@@ -1,136 +1,77 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>TestNG:  Unit Test</title>
-<style type="text/css">
-table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
-table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
-border:1px solid #000099;padding:.25em .5em .25em .5em
-}
-table.result th {vertical-align:bottom}
-tr.param th {padding-left:1em;padding-right:1em}
-tr.param td {padding-left:.5em;padding-right:2em}
-td.numi,th.numi,td.numi_attn {
-text-align:right
-}
-tr.total td {font-weight:bold}
-table caption {
-text-align:center;font-weight:bold;
-}
-table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
-table.passed td,table tr.passedeven td {background-color: #33FF33;}
-table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
-table.passed td,table tr.skippedodd td {background-color: #dddddd;}
-table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
-table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
-tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
-p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
-div.shootout {padding:2em;border:3px #4854A8 solid}
-</style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
 </head>
 <body>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Buscar prestaciones</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">5,4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">genesisCobertura</th></tr>
+<tr><td><a href="#t0">BusquedaPrestacion</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">152.604</td><td></td><td></td></tr>
 </table>
-<table cellspacing="0" cellpadding="0" class="passed" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Buscar prestaciones &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones</td><td><a href="#m1"><b>startUp</b>  </a></td><td class="numi">1</td><td>1532462403722</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Buscar prestaciones &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones</td><td><a href="#m2"><b>beforeMethod</b>  </a></td><td class="numi">1</td><td>1532462409050</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Buscar prestaciones &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones</td><td><a href="#m3"><b>abrirServicioSocio</b>  </a></td><td class="numi">1</td><td>1532462409055</td><td class="numi">5</td></tr>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">genesisCobertura</th></tr></tbody><tbody id="t0"><tr><th colspan="4">BusquedaPrestacion &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones</td><td><a href="#m0">BusquedaPrestacion</a></td><td rowspan="1">1534250161709</td><td rowspan="1">567</td></tr></tbody>
 </table>
-<h1>Buscar prestaciones</h1>
-<h2 id="m1">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones:startUp</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr>
-<tr class="param stripe"><td>iexplorer</td>
-<td>http://192.168.56.1:5551/wd/hub</td>
-<td>SS36739794</td>
-<td>intranet07</td>
-<td>testing</td>
-<td>60282144302</td>
-<td>Portal Corporativo</td>
-<td>org.testng.TestRunner@4803b726</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="8">
-<p>Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+<h2>BusquedaPrestacion</h2><h3 id="m0">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones#BusquedaPrestacion</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>255060</td><td>CONSULTA EN CONSULTORIO</td><td>Genesis Cobertura</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
 System info: host: &apos;SMSL044&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: driver.version: RemoteWebDriver</p>
-org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-<br/>at ar.com.osde.portalsua.selenium.Base_Test.&lt;init&gt;(Base_Test.java:56)
-<br/>at ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones.startUp(Test_Busqueda_Prestaciones.java:57)
-<br/>25 lines not shown
-<p>Caused by Connect to 192.168.56.1:5551 [/192.168.56.1] failed: Connection refused: connect</p>
-org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
-<br/>at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
-<br/>at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
-<br/>at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-<br/>at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
-<br/>at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
-<br/>at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-<br/>at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-<br/>at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
-<br/>at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-<br/>at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
-<br/>at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-<br/>at ar.com.osde.portalsua.selenium.Base_Test.&lt;init&gt;(Base_Test.java:56)
-<br/>at ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones.startUp(Test_Busqueda_Prestaciones.java:57)
-<br/>25 lines not shown
-<p>Caused by Connection refused: connect</p>
-java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-<br/>at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-<br/>at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-<br/>at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-<br/>at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-<br/>at java.net.PlainSocketImpl.connect(Unknown Source)
-<br/>at java.net.SocksSocketImpl.connect(Unknown Source)
-<br/>at java.net.Socket.connect(Unknown Source)
-<br/>at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
-<br/>at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
-<br/>at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
-<br/>at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
-<br/>at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
-<br/>at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
-<br/>at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
-<br/>at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
-<br/>at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
-<br/>at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
-<br/>at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
-<br/>at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
-<br/>at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-<br/>at ar.com.osde.portalsua.selenium.Base_Test.&lt;init&gt;(Base_Test.java:56)
-<br/>at ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones.startUp(Test_Busqueda_Prestaciones.java:57)
-<br/>25 lines not shown
-</td></tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones:beforeMethod</h2>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones:abrirServicioSocio</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr>
-<tr class="param stripe"><td>62470794501</td>
-<td>2630</td>
-<td>SERVICIOS</td>
-<td></td>
-</tr>
-</table>
-<p class="totop"><a href="#summary">back to summary</a></p>
-</body></html>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\ntedesco\AppData\Local\Temp\scoped_dir6000_23583}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5d51cd2a0c76d4536ae500f49f39572f
+Command duration or timeout: 241 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;SMSL044&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=true, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\ntedesco\AppData\Local\Temp\scoped_dir6000_23583}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, webdriver.remote.sessionid=6017d67e-f4f6-4260-815e-f970a01e75ff, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6017d67e-f4f6-4260-815e-f970a01e75ff
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at ar.com.osde.genesisCobertura.selenium.Busq_Prestaciones_Medicamentos.cargarPrestacion(Busq_Prestaciones_Medicamentos.java:96)
+	at ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones.BusquedaPrestacion(Test_Busqueda_Prestaciones.java:115)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;SMSL044&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:142)
+	... 36 more
+Caused by: org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
+System info: host: &apos;SMSL044&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\ntedesco\AppData\Local\Temp\scoped_dir6000_23583}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5d51cd2a0c76d4536ae500f49f39572f
+Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;
+System info: host: &apos;SMSL044&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_171&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:344)
+	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
+	at com.sun.proxy.$Proxy8.click(Unknown Source)
+	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:30)
+	at org.openqa.selenium.remote.server.handler.ClickElement.call(ClickElement.java:22)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 43 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

@@ -22,6 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/ntedesco/Documents/Proyectos/Automatizacion/portalSua3.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/ntedesco/Documents/Proyectos/Automatizacion/portalSua9.jar" sourcepath="/selenium-portalSUA"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

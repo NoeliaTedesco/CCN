@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="SuitePortalSua" parallel="false" preserve-order="true">
-
-	<parameter name="usuario" value="SS36739794" />
-	<parameter name="password" value="intranet08" />
-	<parameter name="ambiente" value="testing" />
-	<parameter name="browser" value="iexplorer" />
+<suite name="genesisCobertura" parallel="false" preserve-order="true">
 
 	<!-- CONFIGURACION SELENIUM GRID Se debe ejecutar el siguiente comando en 
 		la pc HUB - donde se encuentra el proyecto selenium (eclipse) Es necesario 
@@ -14,6 +9,8 @@
 		en esa carpeta y ejecutar el comando java -jar selenium-server-standalone-3.0.1.jar 
 		-role hub Se debe ejecutar este comando en cada pc nodo - No es necesario 
 		descargarse el proyecto en eclipse Es necesario descargarse el archivo "selenium-server-standalone-3.0.1.jar", 
+		
+		
 		posicionarse en esa carpeta y ejecutar el comando java -Dwebdriver.chrome.driver=<path 
 		donde se encuentra el driver> -Dwebdriver.ie.driver=<path donde se encuentra 
 		el driver> -jar selenium-server-standalone-3.0.1.jar -role webdriver -hub 
@@ -23,7 +20,11 @@
 		-jar selenium-server-standalone-3.0.1.jar -role webdriver -hub http://10.247.0.20:4444/grid/register 
 		-port 5558 -->
 
-	<parameter name="ipNodo" value="http://192.168.56.1:5555/wd/hub" />
+	<parameter name="usuario" value="SS36739794" />
+	<parameter name="password" value="intranet08" />
+	<parameter name="ambiente" value="testing" />
+	<parameter name="browser" value="chrome" />
+	<parameter name="ipNodo" value="http://100.1.3.86:5555/wd/hub" />
 	<parameter name="path_ScreenShotOnFailure" value="C://SCREENSHOTS" />
 	<parameter name="appGerencia" value="Portal Corporativo" />
 	<parameter name="sSocio" value="62470794501" />
@@ -32,19 +33,14 @@
 	<parameter name="nombreServicio" value="Genesis Cobertura" />
 	<parameter name="idServicio" value="2630" />
 
-
 	<test name="BusquedaPrestacion" parallel="false" preserve-order="true">
 		<parameter name="CodPrestacion" value="255060" />
 		<parameter name="DesPrestacion" value="CONSULTA EN CONSULTORIO" />
-
-
 		<classes>
 			<class
 				name="ar.com.osde.genesisCobertura.testng.Test_Busqueda_Prestaciones">
-				<methods>
-					<include name="" />
-				</methods>
 			</class>
 		</classes>
+
 	</test>
 </suite>
