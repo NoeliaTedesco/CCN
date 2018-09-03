@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package ar.com.osde.genesisCobertura.selenium;
 
 import org.apache.log4j.Logger;
@@ -108,10 +107,3 @@ public class Busq_Prestaciones_Medicamentos {
 	 */
 
 }
-=======
-package ar.com.osde.genesisCobertura.selenium;
-
-public class Busq_Prestaciones_Medicamentos {
-
-}
->>>>>>> branch 'master' of https://github.com/NoeliaTedesco/CCN.git
